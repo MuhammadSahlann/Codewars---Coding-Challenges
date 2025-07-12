@@ -2,26 +2,6 @@
 
 // https://www.codewars.com/kata/554b4ac871d6813a03000035/train/javascript
 
-function highAndLows(numbers) {
-  let nums = numbers.split(' ');
-  let high = nums[0];
-  let low  = nums[0];
-  
-  for (let i = 1; i <= nums.length; i++) {
-    if (Number(high) < Number(nums[i])) {
-      high = nums[i];
-    }
-  }
-  
-  for (let i = 1; i <= nums.length; i++) {
-    if (Number(low) > Number(nums[i])) {
-      low = nums[i];
-    }
-  }
-  
-  return `${high} ${low}`;
-}
-
 function highAndLow(numbers) {
   let arrNumber  = numbers.split(' ');
   let highNumber = arrNumber[0];
@@ -30,7 +10,7 @@ function highAndLow(numbers) {
   
   for (let i = 1; i <= arrNumber.length; i++) {
     number = Number(arrNumber[i]);
-    
+ 
     if (number < Number(lowNumber)) {
       lowNumber = number;
     }
@@ -43,5 +23,7 @@ function highAndLow(numbers) {
   return `${highNumber} ${lowNumber}`;
 }
 
-
 console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4")); // "42 -9"
+console.log(highAndLow("1 2 3 4 5")); // return "5 1"
+console.log(highAndLow("1 2 -3 4 5")); // return "5 -3"
+console.log(highAndLow("1 9 3 4 -5")); // return "9 -5"

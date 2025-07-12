@@ -5,3 +5,6 @@
 function evenOrOdd(number) {
   return (number % 2 === 0) ? 'Even' : 'Odd';
 }
+
+console.log(evenOrOdd(10)); // Even
+console.log(evenOrOdd(13)); // Odd

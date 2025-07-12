@@ -15,3 +15,6 @@ function solution(number) {
   
   return result;
 }
+
+console.log(solution(10)); // 3+5+6+9    => 23
+console.log(solution(12)); // 3+5+6+9+10 => 33

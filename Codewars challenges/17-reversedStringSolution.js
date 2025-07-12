@@ -14,3 +14,5 @@ function solution(str) {
 }
 
 console.log(solution('world')); // 'dlrow'
+console.log(solution('welcome')); // 'emoclew'
+console.log(solution('hello')); // 'olleh'

@@ -7,3 +7,6 @@ function makeNegative(num) {
 }
 
 console.log(makeNegative(42)); // -42
+console.log(makeNegative(2)); // -2
+console.log(makeNegative(-9)); // -9
+console.log(makeNegative(13)); // -13

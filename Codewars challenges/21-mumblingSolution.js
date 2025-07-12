@@ -1,10 +1,5 @@
 // Codewars - Coding Challenge 21
 
-// mumbling
-// ex
-// accum('code') // C-Oo-Ddd-Eeee
-// accum('html') // H-Tt-Mmm-Llll
-
 // https://www.codewars.com/kata/5667e8f4e3f572a8f2000039
 
 function accum(s) {
@@ -21,3 +16,4 @@ function accum(s) {
 }
 
 console.log(accum('code')); // C-Oo-Ddd-Eeee
+console.log(accum('html')); // H-Tt-Mmm-Llll

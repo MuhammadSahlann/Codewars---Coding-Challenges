@@ -39,25 +39,25 @@ function likes(names) {
   return (names.length === 0) ? suffix : result;
 }
 
-function likes(names) {
-  let templates = [
-    'no one likes this',
-    '{name} likes this',
-    '{name} and {name} like this',
-    '{name}, {name} and {name} like this',
-    '{name}, {name} and {n} others like this'
-  ];
+//function likes(names) {
+//  let templates = [
+//    'no one likes this',
+//    '{name} likes this',
+//    '{name} and {name} like this',
+//    '{name}, {name} and {name} like this',
+//    '{name}, {name} and {n} others like this'
+//  ];
+//
+//  let id = Math.min(names.length, 4);
+//
+//  return templates[id].replace(/{name}|{n}/g, function(val) {
+//    return val === '{name}' ? names.shift() : names.length;
+//  });
+//}
 
-  let idx = Math.min(names.length, 4);
 
-  return templates[idx].replace(/{name}|{n}/g, function(val) {
-    return val === '{name}' ? names.shift() : names.length;
-  });
-}
-
-
-// likes([]), 'no one likes this';
-// likes(['Peter']), 'Peter likes this';
-// likes(['Jacob', 'Alex']), 'Jacob and Alex like this';
-// likes(['Max', 'John', 'Mark']), 'Max, John and Mark like this';
-// likes(['Alex', 'Jacob', 'Mark', 'Max']), 'Alex, Jacob and 2 others like this';
+console.log(likes([])); // 'no one likes this'
+console.log(likes(['Peter'])); // 'Peter likes this'
+console.log(likes(['Jacob', 'Alex'])); // 'Jacob and Alex like this'
+console.log(likes(['Max', 'John', 'Mark'])); // 'Max, John and Mark like this'
+console.log(likes(['Alex', 'Jacob', 'Mark', 'Max'])); // 'Alex, Jacob and 2 others like this'

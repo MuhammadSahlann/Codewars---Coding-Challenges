@@ -3,10 +3,6 @@
 // https://www.codewars.com/kata/5467e4d82edf8bbf40000155/train/javascript
 
 function descendingOrder(numbers) {
-  return Number(numbers.toString().split('').sort().reverse().join(''))
-}
-
-function descendingOrder(numbers) {
   let arrNumber = String(numbers).split('');
   
   for (let i = 0; i < arrNumber.length; i++) {
@@ -19,7 +15,15 @@ function descendingOrder(numbers) {
       }
     }
   }
+  
   return Number(arrNumber.join(''));
 }
 
-console.log(descendingOrder(123)) // 321
+//function descendingOrder(numbers) {
+//  return Number(numbers.toString().split('').sort().reverse().join(''))
+//}
+
+console.log(descendingOrder(123)); // 321
+console.log(descendingOrder(42145)); // 54421
+console.log(descendingOrder(145263)); // 654321
+console.log(descendingOrder(123456789)); // 987654321
