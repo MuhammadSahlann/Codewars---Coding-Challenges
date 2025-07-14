@@ -4,13 +4,13 @@
 
 //function numberToString(num) {
 //  let result = '';
-//  let arrNum = String(num)
+//  let arrNum = String(num);
 //  
 //  for (let i = 0; i < arrNum.length; i++) {
 //    result += arrNum[i];
 //  }
 //  
-//  return result
+//  return result;
 //}
 
 function numberToString(num) {

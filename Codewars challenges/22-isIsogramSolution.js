@@ -2,13 +2,19 @@
 
 // https://www.codewars.com/kata/54ba84be607a92aa900000f1/train/javascript
 
+//function isIsogram(str) {
+//  for (let i = 0; i < str.length; i++) {
+//    for (let j = i + 1; j < str.length; j++) {
+//      if(str[i].toLowerCase() == str[j].toLowerCase()) return false;
+//    }
+//  }
+//
+//  return true;
+//}
+
 function isIsogram(str) {
-  for (let i = 0; i < str.length; i++) {
-    for (let j = i + 1; j < str.length; j++) {
-      if(str[i].toLowerCase() == str[j].toLowerCase()) return false;
-    }
-  }
-  return true;
+  str = str.toLowerCase();
+  return new Set(str).size === str.length;
 }
 
 console.log(isIsogram('Dermatoglyphics')); // true

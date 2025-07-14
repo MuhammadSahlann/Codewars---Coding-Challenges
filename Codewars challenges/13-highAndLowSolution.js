@@ -2,25 +2,50 @@
 
 // https://www.codewars.com/kata/554b4ac871d6813a03000035/train/javascript
 
+//function highAndLow(numbers) {
+//  let arrNumber  = numbers.split(' ');
+//  let highNumber = arrNumber[0];
+//  let lowNumber  = arrNumber[0];
+//  let number;
+//  
+//  for (let i = 1; i < arrNumber.length; i++) {
+//    number = Number(arrNumber[i]);
+// 
+//    if (number < Number(lowNumber)) {
+//      lowNumber = number;
+//    }
+//    
+//    if (number > Number(highNumber)) {
+//      highNumber = number;
+//    }
+//  }
+//  
+//  return `${highNumber} ${lowNumber}`;
+//}
+
+//function highAndLow(numbers) {
+//  let arrNumber  = numbers.split(' ').map(Number);
+//  let highNumber = arrNumber[0];
+//  let lowNumber  = arrNumber[0];
+//  
+//  for (let i = 1; i < arrNumber.length; i++) {
+//    let number = arrNumber[i];
+//
+//    if (number < lowNumber) {
+//      lowNumber = number;
+//    }
+//    
+//    if (number > highNumber) {
+//      highNumber = number;
+//    }
+//  }
+//  
+//  return `${highNumber} ${lowNumber}`;
+//}
+
 function highAndLow(numbers) {
-  let arrNumber  = numbers.split(' ');
-  let highNumber = arrNumber[0];
-  let lowNumber  = arrNumber[0];
-  let number;
-  
-  for (let i = 1; i <= arrNumber.length; i++) {
-    number = Number(arrNumber[i]);
- 
-    if (number < Number(lowNumber)) {
-      lowNumber = number;
-    }
-    
-    if (number > Number(highNumber)) {
-      highNumber = number;
-    }
-  }
-  
-  return `${highNumber} ${lowNumber}`;
+  const arr = numbers.split(' ').map(Number);
+  return `${Math.max(...arr)} ${Math.min(...arr)}`;
 }
 
 console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4")); // "42 -9"
