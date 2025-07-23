@@ -8,10 +8,13 @@ function timeConversion(s) {
     let parts = time.split(':');
     let hour  = parseInt(parts[0]);
 
-    // hour = (format === 'PM') ? hour + 12 : Math.abs(hour - 12); 
-    hour = (format === 'PM') ? hour + 12 : Math.abs(hour - 12); 
+    if (format === 'AM') {
+        if (hour === 12) hour = 0;
+    } else {
+        if (hour != 12) hour += 12;
+    }
 
-    return `${String((hour < 10) ? '0'+hour : hour)}:${parts[1]}:${parts[2]}`;
+    return `${(hour < 10) ? '0'+hour : hour}:${parts[1]}:${parts[2]}`;
 }
 
 console.log(timeConversion('06:40:03AM'));
