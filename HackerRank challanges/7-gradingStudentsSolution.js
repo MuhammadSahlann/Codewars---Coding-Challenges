@@ -4,10 +4,10 @@
 
 function gradingStudents(grades) {
     for (let i = 0; i < grades.length; i++) {
-        if ((Math.floor(grades[i] / 5) * 5 + 5) >= 40) {
-            if ((Math.floor(grades[i] / 5) * 5 + 5) - grades[i] < 3) {
-                grades[i] += Math.floor(grades[i] / 5) * 5 + 5 - grades[i];
-            }
+        let grade = Math.ceil(grades[i] / 5) * 5;
+
+        if (grade >= 40) {
+            if (grade - grades[i] < 3) grades[i] += grade - grades[i];
         }
     }
 
